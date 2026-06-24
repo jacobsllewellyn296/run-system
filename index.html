@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RUN.SYSTEM</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div id="transformScreen">
+
+<h2>SYSTEM OVERRIDE</h2>
+
+<p>TRANSFORMING...</p>
+
+</div>
+
+
+
+
+<div class="hangar">
+
+
+
+<h1>RUN.SYSTEM</h1>
+
+
+
+
+<div class="container">
+
+
+
+
+
+<!-- LEFT CONTROL PANEL -->
+
+
+<div class="panel">
+
+
+<h2>COMMAND CENTER</h2>
+
+
+
+<input 
+id="searchBox"
+type="text"
+placeholder="Enter robot command...">
+
+
+
+<button onclick="loadRobot()">
+
+LOAD
+
+</button>
+
+
+
+
+
+<div id="commands">
+
+
+
+<div id="commandButtons">
+
+
+<button onclick="robotAction('PATROL')">
+PATROL
+</button>
+
+
+<button onclick="robotAction('SCAN')">
+SCAN
+</button>
+
+
+<button onclick="robotAction('DEFEND')">
+DEFEND
+</button>
+
+
+<button onclick="robotAction('BOOST')">
+BOOST
+</button>
+
+
+<button onclick="robotAction('REPAIR')">
+REPAIR
+</button>
+
+
+<button onclick="robotAction('STOP')">
+STOP
+</button>
+
+
+</div>
+
+
+
+
+
+<br>
+
+
+
+<button onclick="killerMode()">
+
+⚡ KILLER MODE ⚡
+
+</button>
+
+
+
+
+<button onclick="normalMode()">
+
+NORMAL MODE
+
+</button>
+
+
+
+
+
+<div class="statusPanel">
+
+
+<h3>SYSTEM STATUS</h3>
+
+
+<p id="status">
+
+MODE: NORMAL
+
+</p>
+
+
+
+<p>
+
+ROBOT:
+RUN-01
+
+</p>
+
+
+
+<p>
+
+AI CORE:
+ONLINE
+
+</p>
+
+
+
+<p>
+
+BATTERY
+
+</p>
+
+
+<div class="battery">
+
+<div id="batteryLevel"></div>
+
+</div>
+
+
+
+<p id="scan">
+
+SCAN: READY
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- RIGHT ROBOT AREA -->
+
+
+
+<div class="robotZone">
+
+
+
+<div id="robot" class="robot">
+
+
+
+
+
+<div class="head">
+
+
+<div class="eyes"></div>
+
+
+</div>
+
+
+
+
+
+<div class="chest"></div>
+
+
+
+
+
+<div class="arms">
+
+
+<div class="arm"></div>
+
+
+<div class="arm"></div>
+
+
+</div>
+
+
+
+
+
+
+<div class="waist"></div>
+
+
+
+
+
+<div class="legs">
+
+
+<div class="leg"></div>
+
+
+<div class="leg"></div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

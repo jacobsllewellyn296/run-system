@@ -1,0 +1,966 @@
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+
+body{
+
+
+
+    font-family:Arial, sans-serif;
+
+    color:white;
+
+    min-height:100vh;
+
+
+
+    background:
+
+    linear-gradient(
+
+    rgba(0, 0, 0, 0.75),
+
+    rgba(0, 0, 0, 0.75)),
+
+    repeating-linear-gradient(
+
+    90deg,
+
+    #111 0px,
+
+    #111 60px,
+
+    #151515 60px,
+
+    #151515 120px);
+
+
+
+}
+
+
+
+.hangar{
+
+
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:20px;
+
+
+
+}
+
+
+
+h1{
+
+
+
+    text-align:center;
+
+    color:#00d9ff;
+
+    margin-bottom:25px;
+
+    letter-spacing:4px;
+
+
+
+}
+
+
+
+.container{
+
+    display:flex;
+    flex-direction:row;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:80px;
+
+}
+
+
+
+.panel{
+
+
+
+    width:320px;
+
+
+
+    background:#000000;
+
+
+
+    border:2px solid #00d9ff;
+
+
+
+    border-radius:15px;
+
+
+
+    padding:20px;
+
+
+
+    box-shadow:0 0 20px #00d9ff44;
+
+
+
+}
+
+
+
+.panel h2{
+
+
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+
+
+}
+
+
+
+input{
+
+
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:10px;
+
+
+
+    background:#050505;
+
+    color:white;
+
+
+
+    border:1px solid #00d9ff;
+
+
+
+}
+
+
+
+button{
+
+
+
+    width:100%;
+
+    padding:12px;
+
+
+
+    margin-top:10px;
+
+
+
+    background:#0f0f0f;
+
+    color:white;
+
+
+
+    border:1px solid #00d9ff;
+
+
+
+    cursor:pointer;
+
+
+
+}
+
+
+
+button:hover{
+
+
+
+    background:#00d9ff;
+
+    color:black;
+
+
+
+}
+
+
+
+.bottomSection{
+
+
+
+    margin-top:25px;
+
+
+
+}
+
+
+
+.killer{
+
+
+
+    border:1px solid red;
+
+    color:red;
+
+
+
+}
+
+
+
+.killer:hover{
+
+
+
+    background:red;
+
+    color:white;
+
+
+
+}
+
+
+
+.statusPanel{
+
+
+
+    margin-top:20px;
+
+
+
+    border-top:1px solid #444;
+
+
+
+    padding-top:15px;
+
+
+
+}
+
+
+
+.robotZone{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.robot{
+
+
+
+    width:260px;
+
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+
+
+    transition:0.5s;
+
+
+
+}
+
+
+
+.head{
+
+
+
+    width:120px;
+
+    height:90px;
+
+
+
+    background:#1f4fff;
+
+
+
+    border-radius:15px;
+
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+
+}
+
+
+
+.eyes{
+
+
+
+    width:55px;
+
+    height:12px;
+
+
+
+    background:#00e5ff;
+
+
+
+    box-shadow:0 0 15px #00e5ff;
+
+
+
+}
+
+
+
+.chest{
+
+
+
+    width:180px;
+
+    height:130px;
+
+
+
+    background:#c92424;
+
+
+
+    margin-top:10px;
+
+
+
+    border-radius:12px;
+
+
+
+}
+
+
+
+.arms{
+
+
+
+    display:flex;
+
+    gap:140px;
+
+
+
+    margin-top:-110px;
+
+
+
+}
+
+
+
+.arm{
+
+
+
+    width:35px;
+
+    height:120px;
+
+
+
+    background:#1f4fff;
+
+
+
+}
+
+
+
+.waist{
+
+
+
+    width:100px;
+
+    height:50px;
+
+
+
+    background:#777;
+
+
+
+    margin-top:20px;
+
+
+
+}
+
+
+
+.legs{
+
+
+
+    display:flex;
+
+    gap:30px;
+
+
+
+    margin-top:10px;
+
+
+
+}
+
+
+
+.leg{
+
+
+
+    width:45px;
+
+    height:140px;
+
+
+
+    background:#bfbfbf;
+
+
+
+}
+
+
+
+.killerMode .head{
+
+
+
+    background:#222;
+
+
+
+}
+
+
+
+.killerMode .eyes{
+
+
+
+    background:red;
+
+    box-shadow:0 0 20px red;
+
+
+
+}
+
+
+
+.killerMode .chest{
+
+
+
+    background:#333;
+
+
+
+}
+
+
+
+.killerMode .arm{
+
+
+
+    background:#111;
+
+
+
+}
+
+
+
+.killerMode .waist{
+
+
+
+    background:#222;
+
+
+
+}
+
+
+
+.killerMode .leg{
+
+
+
+    background:#444;
+
+
+
+}
+
+
+
+.killerMode{
+
+
+
+    filter:drop-shadow(0 0 20px red);
+
+
+
+}
+
+@keyframes runMove {
+
+    0% { transform:translateX(0); }
+    50% { transform:translateX(20px); }
+    100% { transform:translateX(0); }
+
+}
+
+@keyframes jumpMove {
+
+    0% { transform:translateY(0); }
+    50% { transform:translateY(-40px); }
+    100% { transform:translateY(0); }
+
+}
+
+@keyframes waveMove {
+
+    0% { transform:rotate(0deg); }
+    25% { transform:rotate(5deg); }
+    50% { transform:rotate(-5deg); }
+    75% { transform:rotate(5deg); }
+    100% { transform:rotate(0deg); }
+
+}
+
+@keyframes danceMove {
+
+    0% { transform:rotate(0deg); }
+    25% { transform:rotate(5deg); }
+    50% { transform:rotate(-5deg); }
+    75% { transform:rotate(5deg); }
+    100% { transform:rotate(0deg); }
+
+}
+.eyes{
+
+    animation:
+    blinkEyes 2s infinite;
+
+}
+
+@keyframes blinkEyes{
+
+    0%{opacity:1;}
+    38%{opacity:1;}
+    45%{opacity:0;}
+    52%{opacity:1;}
+    85%{opacity:1;}
+    92%{opacity:1;}
+    100%{opacity:1;}
+}
+@keyframes runMove {
+
+0%{
+transform:translateX(0);
+}
+
+50%{
+transform:translateX(30px);
+}
+
+100%{
+transform:translateX(0);
+}
+
+}
+
+
+
+@keyframes scanMove {
+
+0%{
+transform:rotateY(0deg);
+}
+
+50%{
+transform:rotateY(180deg);
+}
+
+100%{
+transform:rotateY(360deg);
+}
+
+}
+
+
+
+
+@keyframes defendMove {
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.1);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+
+
+
+@keyframes boostMove {
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-25px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+
+
+
+@keyframes repairMove {
+
+0%{
+transform:rotate(0deg);
+}
+
+50%{
+transform:rotate(10deg);
+}
+
+100%{
+transform:rotate(0deg);
+}
+
+}
+/* KILLER TRANSFORMATION */
+
+
+.transform{
+
+    animation:
+    powerUp 1s infinite;
+
+}
+
+
+
+@keyframes powerUp{
+
+
+0%{
+
+transform:scale(1);
+
+}
+
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+
+
+.killerMode .eyes{
+
+
+background:red;
+
+box-shadow:
+0 0 10px red,
+0 0 30px red,
+0 0 60px red;
+
+
+animation:
+eyePulse 0.5s infinite;
+
+
+}
+
+
+
+
+@keyframes eyePulse{
+
+
+0%{
+
+opacity:1;
+
+}
+
+
+50%{
+
+opacity:0.3;
+
+}
+
+
+100%{
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+
+
+.killerMode .chest{
+
+
+background:#222;
+
+
+box-shadow:
+0 0 20px red;
+
+
+}
+
+
+
+
+.killerMode .arm{
+
+
+background:#111;
+
+
+}
+
+
+
+
+.killerMode .leg{
+
+
+background:#333;
+
+
+}
+#transformScreen{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+
+    background:#000;
+
+    color:red;
+
+    display:none;
+
+
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+
+    z-index:100;
+
+
+    font-size:30px;
+
+
+}
+
+
+#transformScreen h2{
+
+    animation:
+    glitch 0.5s infinite;
+
+}
+
+
+
+
+@keyframes glitch{
+
+
+0%{
+
+transform:translateX(0);
+
+}
+
+
+25%{
+
+transform:translateX(10px);
+
+}
+
+
+50%{
+
+transform:translateX(-10px);
+
+}
+
+
+100%{
+
+transform:translateX(0);
+
+}
+
+
+}
+.battery{
+
+    width:100%;
+
+    height:20px;
+
+    background:#222;
+
+    border:1px solid #00d9ff;
+
+    margin-top:10px;
+
+}
+
+
+#batteryLevel{
+
+
+    width:85%;
+
+    height:100%;
+
+
+    background:#00ff88;
+
+
+    box-shadow:
+    0 0 15px #00ff88;
+
+
+}
+
+
+
+.statusPanel span{
+
+
+color:#00d9ff;
+
+
+}
+.panel{
+
+    flex-shrink:0;
+
+}
+
+
+.robot{
+
+    transform:scale(0.9);
+
+}
